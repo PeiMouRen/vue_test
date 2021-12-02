@@ -25,7 +25,6 @@
     },
     methods:{
       recive(todoObj) {
-        
         console.log('我是app组件，我收到了：', todoObj)
         this.todos.unshift(todoObj)
       },
