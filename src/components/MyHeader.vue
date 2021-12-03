@@ -8,7 +8,6 @@
     import {nanoid} from 'nanoid'
     export default {
         name: 'MyHeader',
-        props:['recive'],
         methods: {
             addTodo(event) {
                 if (!event.target.value.trim()) {
@@ -16,8 +15,8 @@
                     return event.target.value = ''
                 }
                     
-                const todoObj = {id:nanoid(), name:event.target.value, done:false};
-                this.recive(todoObj)
+                const todoObj = {id:nanoid(), name:event.target.value, done:false, isEdit:false};
+                this.$emit('addTodo', todoObj)
                 event.target.value = ''
             }
         }

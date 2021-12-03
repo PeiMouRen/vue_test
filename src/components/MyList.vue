@@ -5,8 +5,6 @@
                 v-for="todoObj in todos" 
                 :key="todoObj.id" 
                 :todo="todoObj" 
-                :changeChecked="changeChecked"
-                :deleteTodo="deleteTodo"
             />
         </ul>
     </div>
@@ -19,7 +17,7 @@
     export default {
         name: 'MyList',
         components:{MyItem},
-        props:['todos','changeChecked','deleteTodo']
+        props:['todos']
     }
 </script>
 

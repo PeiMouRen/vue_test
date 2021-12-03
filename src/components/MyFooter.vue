@@ -1,9 +1,9 @@
 <template>
 
     <div v-show="todos.length !== 0">
-        <input type="checkbox" @click="checkHandler" :checked="isAll">
+        <input type="checkbox" @click="checkAll" :checked="isAll">
         <span>已完成{{finishedSum}}/总共{{todos.length}}</span>
-        <button @click="delDone">删除已完成</button>
+        <button @click="deleteDone">删除已完成</button>
     </div>
 
 </template>
@@ -21,15 +21,15 @@
             }
         },
         methods: {
-            checkHandler(e) {
-                this.checkAll(e.target.checked)
+            checkAll(e) {
+                this.$emit('checkAll', e.target.checked)
             },
-            delDone() {
-                this.deleteDone();
+            deleteDone() {
+                this.$emit('deleteDone')
 
             }
         },
-        props:['todos', 'checkAll','deleteDone']
+        props:['todos']
     }
 </script>
 
