@@ -4,7 +4,17 @@
 
 <script>
     export default {
-        name: 'About'
+        name: 'About',
+        beforeRouteEnter(to, from, next) {
+            console.log(1)
+            console.log(to, from, next)
+            next();
+        },
+        beforeRouteLeave(to, from, next) {
+            console.log(2)
+            console.log(to, from, next)
+            next();
+        }
     }
 </script>
 

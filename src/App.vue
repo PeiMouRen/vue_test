@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>spa-demo</h1>
+      <!-- <h1>spa-demo</h1>
       <template class="demo">
         <div>
           <router-link replace active-class="" to="/about">about</router-link><br>
@@ -9,7 +9,9 @@
         <div>
           <router-view></router-view>
         </div>
-      </template>
+      </template> -->
+      <button>原生</button>
+      <el-button size="mini" type="success" round>成功按钮</el-button>
   </div>
 </template>
 
