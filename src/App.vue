@@ -3,8 +3,8 @@
       <h1>spa-demo</h1>
       <template class="demo">
         <div>
-          <router-link active-class="" to="/about">about</router-link><br>
-          <router-link active-class="" to="/home">home</router-link>
+          <router-link replace active-class="" to="/about">about</router-link><br>
+          <router-link replace active-class="" to="/home">home</router-link>
         </div>
         <div>
           <router-view></router-view>
